@@ -10,6 +10,7 @@ package br.com.projeto.view;
  */
 public class FrmMenu extends javax.swing.JFrame {
 
+    public String usuarioLogado;
     /**
      * Creates new form FrmMenu
      */
@@ -26,6 +27,9 @@ public class FrmMenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        lblUsuario = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -53,6 +57,36 @@ public class FrmMenu extends javax.swing.JFrame {
             }
         });
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel1.setText("Usuário Logado:");
+
+        lblUsuario.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lblUsuario.setForeground(new java.awt.Color(51, 51, 255));
+        lblUsuario.setText("Joao Pedro");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblUsuario)
+                .addContainerGap(1003, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(14, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(lblUsuario))
+                .addContainerGap())
+        );
+
+        jMenu1.setIcon(new javax.swing.ImageIcon("D:\\ProjetosJava\\Projeto_Vendas\\Projeto_Vendas\\src\\main\\java\\imagem\\clientes.png")); // NOI18N
         jMenu1.setText("Clientes");
         jMenu1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
@@ -61,6 +95,7 @@ public class FrmMenu extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
+        jMenu2.setIcon(new javax.swing.ImageIcon("D:\\ProjetosJava\\Projeto_Vendas\\Projeto_Vendas\\src\\main\\java\\imagem\\funcionarios.png")); // NOI18N
         jMenu2.setText("Funcionários");
         jMenu2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
@@ -74,6 +109,7 @@ public class FrmMenu extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu2);
 
+        jMenu3.setIcon(new javax.swing.ImageIcon("D:\\ProjetosJava\\Projeto_Vendas\\Projeto_Vendas\\src\\main\\java\\imagem\\fornecedores.png")); // NOI18N
         jMenu3.setText("Fornecedores");
         jMenu3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
@@ -82,6 +118,7 @@ public class FrmMenu extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu3);
 
+        jMenu6.setIcon(new javax.swing.ImageIcon("D:\\ProjetosJava\\Projeto_Vendas\\Projeto_Vendas\\src\\main\\java\\imagem\\produtos.png")); // NOI18N
         jMenu6.setText("Produtos");
         jMenu6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
@@ -93,6 +130,7 @@ public class FrmMenu extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu6);
 
+        jMenu4.setIcon(new javax.swing.ImageIcon("D:\\ProjetosJava\\Projeto_Vendas\\Projeto_Vendas\\src\\main\\java\\imagem\\vendas.png")); // NOI18N
         jMenu4.setText("Vendas");
         jMenu4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
@@ -112,6 +150,7 @@ public class FrmMenu extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu4);
 
+        jMenu5.setIcon(new javax.swing.ImageIcon("D:\\ProjetosJava\\Projeto_Vendas\\Projeto_Vendas\\src\\main\\java\\imagem\\configuracoes.png")); // NOI18N
         jMenu5.setText("Configurações");
         jMenu5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
@@ -120,6 +159,7 @@ public class FrmMenu extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu5);
 
+        jMenu7.setIcon(new javax.swing.ImageIcon("D:\\ProjetosJava\\Projeto_Vendas\\Projeto_Vendas\\src\\main\\java\\imagem\\sair.png")); // NOI18N
         jMenu7.setText("Sair");
         jMenu7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jMenuBar1.add(jMenu7);
@@ -130,11 +170,13 @@ public class FrmMenu extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1192, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1055, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 992, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -152,6 +194,7 @@ public class FrmMenu extends javax.swing.JFrame {
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
         // TODO add your handling code here:
         this.setExtendedState(this.MAXIMIZED_BOTH);
+        lblUsuario.setText(usuarioLogado);
         this.setVisible(true);
 
     }//GEN-LAST:event_formWindowActivated
@@ -192,6 +235,7 @@ public class FrmMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
@@ -209,5 +253,7 @@ public class FrmMenu extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lblUsuario;
     // End of variables declaration//GEN-END:variables
 }
