@@ -169,7 +169,7 @@ public class ClientesDAO {
 
     }
 
-    //METODO CONSULTACLIENTE POR NOME
+    //METODO CONSULTA CLIENTE POR NOME
     public Clientes consultaPorNome(String nome) {
         try {
             String sql = "select * from tb_clientes where nome = ?";
