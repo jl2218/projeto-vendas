@@ -83,7 +83,7 @@ public class FrmProdutos extends javax.swing.JFrame {
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowActivated(java.awt.event.WindowEvent evt) {
@@ -642,8 +642,8 @@ public class FrmProdutos extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JPanel painelConsulta;
+    public javax.swing.JTabbedPane jTabbedPane1;
+    public javax.swing.JPanel painelConsulta;
     private javax.swing.JPanel painelDados;
     private javax.swing.JTable tabelaProdutos;
     private javax.swing.JTextField txtCodigo;

@@ -195,7 +195,14 @@ public class FrmLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEntrarActionPerformed
 
     private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
-        // TODO add your handling code here:
+        // BOTAO SAIR DE LOGIN
+        int op;
+        
+        op = JOptionPane.showConfirmDialog(null, "Você tem certexa que deseja sair ? ");
+        
+        if(op == 0){
+            System.exit(0);
+        }
     }//GEN-LAST:event_btnSairActionPerformed
 
     private void txtSenhaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtSenhaKeyPressed

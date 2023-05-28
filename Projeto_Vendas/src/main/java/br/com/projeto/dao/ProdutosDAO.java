@@ -5,7 +5,6 @@
 package br.com.projeto.dao;
 
 import br.com.projeto.jdbc.ConnectionFactory;
-import br.com.projeto.model.Clientes;
 import br.com.projeto.model.Fornecedores;
 import br.com.projeto.model.Produtos;
 import java.sql.Connection;
@@ -32,14 +31,14 @@ public class ProdutosDAO {
     public void cadastrarProdutos(Produtos obj) {
         try {
 
-            String sql = "insert into tb_produtos (descricao, preco, qtd_estoque, for_id) values (?,?,?,?)";                               
+            String sql = "insert into tb_produtos (descricao, preco, qtd_estoque, for_id) values (?,?,?,?)";
 
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setString(1, obj.getDescricao());
             stmt.setDouble(2, obj.getPreco());
             stmt.setInt(3, obj.getQtd_estoque());
             stmt.setInt(4, obj.getFornecedor().getId());
-            
+
             stmt.execute();
             stmt.close();;
 
@@ -49,7 +48,7 @@ public class ProdutosDAO {
             JOptionPane.showMessageDialog(null, "Erro" + erro);
         }
     }
-    
+
     //METODO ALTERAR PRODUTO
     public void alterarProduto(Produtos obj) {
 
@@ -63,10 +62,10 @@ public class ProdutosDAO {
             stmt.setString(1, obj.getDescricao());
             stmt.setDouble(2, obj.getPreco());
             stmt.setInt(3, obj.getQtd_estoque());
-            
-            stmt.setInt(4, obj.getFornecedor().getId());    
-            
-            stmt.setInt(5,obj.getId());
+
+            stmt.setInt(4, obj.getFornecedor().getId());
+
+            stmt.setInt(5, obj.getId());
 
             //3º PASSO - EXECUTAR O COMANDO SQL
             stmt.execute();
@@ -79,7 +78,7 @@ public class ProdutosDAO {
 
         }
     }
-    
+
     //METODO EXCLUIR PRODUTO
     public void excluirProdutos(Produtos obj) {
 
@@ -103,7 +102,7 @@ public class ProdutosDAO {
 
         }
     }
-    
+
     //METODO LISTAR PRODUTOS
     public List<Produtos> listarProdutos() {
         try {
@@ -112,8 +111,8 @@ public class ProdutosDAO {
 
             //CRIAR O SQL, ORGANIZAR E EXECUTAR
             String sql = "select p.id, p.descricao, p.preco, p.qtd_estoque, f.nome from tb_produtos as p "
-                    +"inner join tb_fornecedores as f on (p.for_id = f.id)";
-            
+                    + "inner join tb_fornecedores as f on (p.for_id = f.id)";
+
             PreparedStatement stmt = con.prepareStatement(sql);
             ResultSet rs = stmt.executeQuery();
 
@@ -125,9 +124,9 @@ public class ProdutosDAO {
                 obj.setDescricao(rs.getString("p.descricao"));
                 obj.setPreco(rs.getDouble("p.preco"));
                 obj.setQtd_estoque(rs.getInt("p.qtd_estoque"));
-                
+
                 f.setNome(rs.getString(("f.nome")));
-                
+
                 obj.setFornecedor(f);
 
                 lista.add(obj);
@@ -141,13 +140,13 @@ public class ProdutosDAO {
         }
 
     }
-       
+
     //METODO CONSULTA PRODUTO POR NOME
     public Produtos consultaPorNome(String nome) {
         try {
             String sql = "select p.id, p.descricao, p.preco, p.qtd_estoque, f.nome from tb_produtos as p "
-                    +"inner join tb_fornecedores as f on (p.for_id = f.id) where p.descricao = ?";
-            
+                    + "inner join tb_fornecedores as f on (p.for_id = f.id) where p.descricao = ?";
+
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setString(1, nome);
 
@@ -161,9 +160,9 @@ public class ProdutosDAO {
                 obj.setDescricao(rs.getString("p.descricao"));
                 obj.setPreco(rs.getDouble("p.preco"));
                 obj.setQtd_estoque(rs.getInt("p.preco"));
-                
+
                 f.setNome(rs.getString(("f.nome")));
-                
+
                 obj.setFornecedor(f);
             }
 
@@ -175,8 +174,7 @@ public class ProdutosDAO {
         }
 
     }
-    
-    
+
     //METODO BUSCAR PRODUTO POR NOME
     public List<Produtos> buscaProdutoPorNome(String nome) {
         try {
@@ -185,10 +183,10 @@ public class ProdutosDAO {
 
             //CRIAR O SQL, ORGANIZAR E EXECUTAR
             String sql = "select p.id, p.descricao, p.preco, p.qtd_estoque, f.nome from tb_produtos as p "
-                    +"inner join tb_fornecedores as f on (p.for_id = f.id) where p.descricao like ?";
+                    + "inner join tb_fornecedores as f on (p.for_id = f.id) where p.descricao like ?";
             //String sql = "select p.id, p.descricao, p.preco, p.qtd_estoque, f.nome from tb_produtos as p "
-                  //  + "inner join tb_fornecedores as f on (p.for_id = f.id where p.descricao like ?";
-            
+            //  + "inner join tb_fornecedores as f on (p.for_id = f.id where p.descricao like ?";
+
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setString(1, nome);
 
@@ -201,10 +199,10 @@ public class ProdutosDAO {
                 obj.setId(rs.getInt("p.id"));
                 obj.setDescricao(rs.getString("p.descricao"));
                 obj.setPreco(rs.getDouble("p.preco"));
-                obj.setQtd_estoque(rs.getInt("p.qtd_estoque"));      
-                
+                obj.setQtd_estoque(rs.getInt("p.qtd_estoque"));
+
                 f.setNome(rs.getString(("f.nome")));
-                
+
                 obj.setFornecedor(f);
 
                 lista.add(obj);
@@ -217,13 +215,13 @@ public class ProdutosDAO {
         }
 
     }
-    
+
     //METODO CONSULTA PRODUTO POR CODIGO
     public Produtos consultaPorCodigo(int id) {
         try {
             String sql = "select p.id, p.descricao, p.preco, p.qtd_estoque, f.nome from tb_produtos as p "
-                    +"inner join tb_fornecedores as f on (p.for_id = f.id) where p.id = ?";
-            
+                    + "inner join tb_fornecedores as f on (p.for_id = f.id) where p.id = ?";
+
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setInt(1, id);
 
@@ -237,9 +235,9 @@ public class ProdutosDAO {
                 obj.setDescricao(rs.getString("p.descricao"));
                 obj.setPreco(rs.getDouble("p.preco"));
                 obj.setQtd_estoque(rs.getInt("p.preco"));
-                
+
                 f.setNome(rs.getString(("f.nome")));
-                
+
                 obj.setFornecedor(f);
             }
 
@@ -250,5 +248,63 @@ public class ProdutosDAO {
             return null;
         }
 
+    }
+
+    //METODO QUE ATUALIZA O ESTOQUE
+    public void atualizaEstoque(int id, int qtd_nova) {
+        try {
+            String sql = "update tb_produtos set qtd_estoque =? where id =?";
+
+            PreparedStatement stmt = con.prepareStatement(sql);
+
+            stmt.setInt(1, qtd_nova);
+            stmt.setInt(2, id);
+            stmt.execute();
+            stmt.close();
+
+        } catch (Exception erro) {
+            JOptionPane.showMessageDialog(null, erro);
+        }
+    }
+
+    //METODO QUE RETORNA O ESTOQUE ATUAL
+    public int retornaEstoqueAtual(int id) {
+        try {
+            int qtd_estoque = 0;
+
+            String sql = "SELECT qtd_estoque from tb_produtos where id =?";
+
+            PreparedStatement stmt = con.prepareStatement(sql);
+            stmt.setInt(1, id);
+
+            ResultSet rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                qtd_estoque = (rs.getInt("qtd_estoque"));
+
+            }
+            return qtd_estoque;
+
+        } catch (SQLException e) {
+
+            throw new RuntimeException(e);
+        }
+
+    }
+    //METODO QUE ADICIONA AO ESTOQUE
+    public void adicionarEstoque(int id, int qtd_nova) {
+        try {
+            String sql = "update tb_produtos set qtd_estoque =? where id =?";
+
+            PreparedStatement stmt = con.prepareStatement(sql);
+
+            stmt.setInt(1, qtd_nova);
+            stmt.setInt(2, id);
+            stmt.execute();
+            stmt.close();
+
+        } catch (Exception erro) {
+            JOptionPane.showMessageDialog(null, erro);
+        }
     }
 }
