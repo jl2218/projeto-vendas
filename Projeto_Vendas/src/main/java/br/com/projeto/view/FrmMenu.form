@@ -7,7 +7,7 @@
         <Menu class="javax.swing.JMenu" name="jMenu1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="D:\ProjetosJava\Projeto_Vendas\Projeto_Vendas\src\main\java\imagem\clientes.png"/>
+              <Image iconType="2" name="C:\Users\Lara\Dropbox\My PC (LAPTOP-51K6VIU3)\Documents\NetBeansProjects\Projeto_Vendas\Projeto_Vendas\src\main\java\imagem\clientes.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Clientes"/>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -28,7 +28,7 @@
         <Menu class="javax.swing.JMenu" name="jMenu2">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="D:\ProjetosJava\Projeto_Vendas\Projeto_Vendas\src\main\java\imagem\funcionarios.png"/>
+              <Image iconType="2" name="C:\Users\Lara\Dropbox\My PC (LAPTOP-51K6VIU3)\Documents\NetBeansProjects\Projeto_Vendas\Projeto_Vendas\src\main\java\imagem\funcionarios.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Funcion&#xe1;rios"/>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -49,7 +49,7 @@
         <Menu class="javax.swing.JMenu" name="jMenu3">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="D:\ProjetosJava\Projeto_Vendas\Projeto_Vendas\src\main\java\imagem\fornecedores.png"/>
+              <Image iconType="2" name="C:\Users\Lara\Dropbox\My PC (LAPTOP-51K6VIU3)\Documents\NetBeansProjects\Projeto_Vendas\Projeto_Vendas\src\main\java\imagem\fornecedores.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Fornecedores"/>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -70,7 +70,7 @@
         <Menu class="javax.swing.JMenu" name="jMenu6">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="D:\ProjetosJava\Projeto_Vendas\Projeto_Vendas\src\main\java\imagem\produtos.png"/>
+              <Image iconType="2" name="C:\Users\Lara\Dropbox\My PC (LAPTOP-51K6VIU3)\Documents\NetBeansProjects\Projeto_Vendas\Projeto_Vendas\src\main\java\imagem\produtos.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Produtos"/>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -99,7 +99,7 @@
         <Menu class="javax.swing.JMenu" name="jMenu4">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="D:\ProjetosJava\Projeto_Vendas\Projeto_Vendas\src\main\java\imagem\vendas.png"/>
+              <Image iconType="2" name="C:\Users\Lara\Dropbox\My PC (LAPTOP-51K6VIU3)\Documents\NetBeansProjects\Projeto_Vendas\Projeto_Vendas\src\main\java\imagem\vendas.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Vendas"/>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -142,7 +142,7 @@
         <Menu class="javax.swing.JMenu" name="jMenu5">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="D:\ProjetosJava\Projeto_Vendas\Projeto_Vendas\src\main\java\imagem\configuracoes.png"/>
+              <Image iconType="2" name="C:\Users\Lara\Dropbox\My PC (LAPTOP-51K6VIU3)\Documents\NetBeansProjects\Projeto_Vendas\Projeto_Vendas\src\main\java\imagem\configuracoes.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Configura&#xe7;&#xf5;es"/>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -163,7 +163,7 @@
         <Menu class="javax.swing.JMenu" name="jMenu7">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="D:\ProjetosJava\Projeto_Vendas\Projeto_Vendas\src\main\java\imagem\sair.png"/>
+              <Image iconType="2" name="C:\Users\Lara\Dropbox\My PC (LAPTOP-51K6VIU3)\Documents\NetBeansProjects\Projeto_Vendas\Projeto_Vendas\src\main\java\imagem\sair.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Sair"/>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -213,7 +213,7 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="0" pref="992" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="969" max="32767" attributes="0"/>
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>

@@ -77,16 +77,16 @@ public class FrmPagamentos extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(130, 130, 130)
+                .addGap(217, 217, 217)
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(37, 37, 37)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(45, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addGap(39, 39, 39))
         );
 
         txtDinheiro.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -192,7 +192,7 @@ public class FrmPagamentos extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(172, 172, 172)
+                        .addGap(181, 181, 181)
                         .addComponent(btnFinalizar)))
                 .addContainerGap(25, Short.MAX_VALUE))
         );
@@ -224,9 +224,9 @@ public class FrmPagamentos extends javax.swing.JFrame {
                             .addComponent(jLabel6)
                             .addComponent(txtTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jScrollPane1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 151, Short.MAX_VALUE)
+                .addGap(41, 41, 41)
                 .addComponent(btnFinalizar)
-                .addGap(83, 83, 83))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
 
         pack();

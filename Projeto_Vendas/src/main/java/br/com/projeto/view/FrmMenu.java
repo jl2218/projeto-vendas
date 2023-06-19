@@ -88,7 +88,7 @@ public class FrmMenu extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jMenu1.setIcon(new javax.swing.ImageIcon("D:\\ProjetosJava\\Projeto_Vendas\\Projeto_Vendas\\src\\main\\java\\imagem\\clientes.png")); // NOI18N
+        jMenu1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lara\\Dropbox\\My PC (LAPTOP-51K6VIU3)\\Documents\\NetBeansProjects\\Projeto_Vendas\\Projeto_Vendas\\src\\main\\java\\imagem\\clientes.png")); // NOI18N
         jMenu1.setText("Clientes");
         jMenu1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
@@ -102,7 +102,7 @@ public class FrmMenu extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setIcon(new javax.swing.ImageIcon("D:\\ProjetosJava\\Projeto_Vendas\\Projeto_Vendas\\src\\main\\java\\imagem\\funcionarios.png")); // NOI18N
+        jMenu2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lara\\Dropbox\\My PC (LAPTOP-51K6VIU3)\\Documents\\NetBeansProjects\\Projeto_Vendas\\Projeto_Vendas\\src\\main\\java\\imagem\\funcionarios.png")); // NOI18N
         jMenu2.setText("Funcionários");
         jMenu2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
@@ -116,7 +116,7 @@ public class FrmMenu extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu2);
 
-        jMenu3.setIcon(new javax.swing.ImageIcon("D:\\ProjetosJava\\Projeto_Vendas\\Projeto_Vendas\\src\\main\\java\\imagem\\fornecedores.png")); // NOI18N
+        jMenu3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lara\\Dropbox\\My PC (LAPTOP-51K6VIU3)\\Documents\\NetBeansProjects\\Projeto_Vendas\\Projeto_Vendas\\src\\main\\java\\imagem\\fornecedores.png")); // NOI18N
         jMenu3.setText("Fornecedores");
         jMenu3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
@@ -130,7 +130,7 @@ public class FrmMenu extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu3);
 
-        jMenu6.setIcon(new javax.swing.ImageIcon("D:\\ProjetosJava\\Projeto_Vendas\\Projeto_Vendas\\src\\main\\java\\imagem\\produtos.png")); // NOI18N
+        jMenu6.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lara\\Dropbox\\My PC (LAPTOP-51K6VIU3)\\Documents\\NetBeansProjects\\Projeto_Vendas\\Projeto_Vendas\\src\\main\\java\\imagem\\produtos.png")); // NOI18N
         jMenu6.setText("Produtos");
         jMenu6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
@@ -152,7 +152,7 @@ public class FrmMenu extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu6);
 
-        jMenu4.setIcon(new javax.swing.ImageIcon("D:\\ProjetosJava\\Projeto_Vendas\\Projeto_Vendas\\src\\main\\java\\imagem\\vendas.png")); // NOI18N
+        jMenu4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lara\\Dropbox\\My PC (LAPTOP-51K6VIU3)\\Documents\\NetBeansProjects\\Projeto_Vendas\\Projeto_Vendas\\src\\main\\java\\imagem\\vendas.png")); // NOI18N
         jMenu4.setText("Vendas");
         jMenu4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
@@ -182,7 +182,7 @@ public class FrmMenu extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu4);
 
-        jMenu5.setIcon(new javax.swing.ImageIcon("D:\\ProjetosJava\\Projeto_Vendas\\Projeto_Vendas\\src\\main\\java\\imagem\\configuracoes.png")); // NOI18N
+        jMenu5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lara\\Dropbox\\My PC (LAPTOP-51K6VIU3)\\Documents\\NetBeansProjects\\Projeto_Vendas\\Projeto_Vendas\\src\\main\\java\\imagem\\configuracoes.png")); // NOI18N
         jMenu5.setText("Configurações");
         jMenu5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
@@ -196,7 +196,7 @@ public class FrmMenu extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu5);
 
-        jMenu7.setIcon(new javax.swing.ImageIcon("D:\\ProjetosJava\\Projeto_Vendas\\Projeto_Vendas\\src\\main\\java\\imagem\\sair.png")); // NOI18N
+        jMenu7.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lara\\Dropbox\\My PC (LAPTOP-51K6VIU3)\\Documents\\NetBeansProjects\\Projeto_Vendas\\Projeto_Vendas\\src\\main\\java\\imagem\\sair.png")); // NOI18N
         jMenu7.setText("Sair");
         jMenu7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jMenu7.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -217,7 +217,7 @@ public class FrmMenu extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 992, Short.MAX_VALUE)
+                .addGap(0, 969, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -259,7 +259,7 @@ public class FrmMenu extends javax.swing.JFrame {
         // SAIR DO SISTEMA
         int op;
         
-        op = JOptionPane.showConfirmDialog(null, "Você tem certexa que deseja sair ? ");
+        op = JOptionPane.showConfirmDialog(null, "Você tem certeza que deseja sair ? ");
         
         if(op == 0){
             System.exit(0);
