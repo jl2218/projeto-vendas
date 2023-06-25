@@ -31,7 +31,7 @@ public class ProdutosDAO {
     public void cadastrarProdutos(Produtos obj) {
         try {
 
-            String sql = "insert into tb_produtos (descricao, preco, qtd_estoque, for_id) values (?,?,?,?)";
+            String sql = "insert into BDVENDAS.tb_produtos (descricao, preco, qtd_estoque, for_id) values (?,?,?,?)";
 
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setString(1, obj.getDescricao());
@@ -55,7 +55,7 @@ public class ProdutosDAO {
         try {
 
             //1º PASSO - CRIAR O COMANDO SQL
-            String sql = "update tb_produtos set descricao=?, preco=?, qtd_estoque=?, for_id=? where id=?";
+            String sql = "update BDVENDAS.tb_produtos set descricao=?, preco=?, qtd_estoque=?, for_id=? where id=?";
 
             //2º PASSO - CONECTAR O BANCO DE DADOS E ORGANIZAR O COMANDO SQL
             PreparedStatement stmt = con.prepareStatement(sql);
@@ -85,7 +85,7 @@ public class ProdutosDAO {
         try {
 
             //1º PASSO - CRIAR O COMANDO SQL
-            String sql = "delete from tb_produtos where id = ?";
+            String sql = "delete from BDVENDAS.tb_produtos where id = ?";
 
             //2º PASSO - CONECTAR O BANCO DE DADOS E ORGANIZAR O COMANDO SQL
             PreparedStatement stmt = con.prepareStatement(sql);
@@ -110,8 +110,8 @@ public class ProdutosDAO {
             List<Produtos> lista = new ArrayList<>();
 
             //CRIAR O SQL, ORGANIZAR E EXECUTAR
-            String sql = "select p.id, p.descricao, p.preco, p.qtd_estoque, f.nome from tb_produtos as p "
-                    + "inner join tb_fornecedores as f on (p.for_id = f.id)";
+            String sql = "select p.id, p.descricao, p.preco, p.qtd_estoque, f.nome from BDVENDAS.tb_produtos as p "
+                    + "inner join BDVENDAS.tb_fornecedores as f on (p.for_id = f.id)";
 
             PreparedStatement stmt = con.prepareStatement(sql);
             ResultSet rs = stmt.executeQuery();
@@ -144,8 +144,8 @@ public class ProdutosDAO {
     //METODO CONSULTA PRODUTO POR NOME
     public Produtos consultaPorNome(String nome) {
         try {
-            String sql = "select p.id, p.descricao, p.preco, p.qtd_estoque, f.nome from tb_produtos as p "
-                    + "inner join tb_fornecedores as f on (p.for_id = f.id) where p.descricao = ?";
+            String sql = "select p.id, p.descricao, p.preco, p.qtd_estoque, f.nome from BDVENDAS.tb_produtos as p "
+                    + "inner join BDVENDAS.tb_fornecedores as f on (p.for_id = f.id) where p.descricao = ?";
 
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setString(1, nome);
@@ -182,8 +182,8 @@ public class ProdutosDAO {
             List<Produtos> lista = new ArrayList<>();
 
             //CRIAR O SQL, ORGANIZAR E EXECUTAR
-            String sql = "select p.id, p.descricao, p.preco, p.qtd_estoque, f.nome from tb_produtos as p "
-                    + "inner join tb_fornecedores as f on (p.for_id = f.id) where p.descricao like ?";
+            String sql = "select p.id, p.descricao, p.preco, p.qtd_estoque, f.nome from BDVENDAS.tb_produtos as p "
+                    + "inner join BDVENDAS.tb_fornecedores as f on (p.for_id = f.id) where p.descricao like ?";
             //String sql = "select p.id, p.descricao, p.preco, p.qtd_estoque, f.nome from tb_produtos as p "
             //  + "inner join tb_fornecedores as f on (p.for_id = f.id where p.descricao like ?";
 
@@ -219,8 +219,8 @@ public class ProdutosDAO {
     //METODO CONSULTA PRODUTO POR CODIGO
     public Produtos consultaPorCodigo(int id) {
         try {
-            String sql = "select p.id, p.descricao, p.preco, p.qtd_estoque, f.nome from tb_produtos as p "
-                    + "inner join tb_fornecedores as f on (p.for_id = f.id) where p.id = ?";
+            String sql = "select p.id, p.descricao, p.preco, p.qtd_estoque, f.nome from BDVENDAS.tb_produtos as p "
+                    + "inner join BDVENDAS.tb_fornecedores as f on (p.for_id = f.id) where p.id = ?";
 
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setInt(1, id);
@@ -253,7 +253,7 @@ public class ProdutosDAO {
     //METODO QUE ATUALIZA O ESTOQUE
     public void atualizaEstoque(int id, int qtd_nova) {
         try {
-            String sql = "update tb_produtos set qtd_estoque =? where id =?";
+            String sql = "update BDVENDAS.tb_produtos set qtd_estoque =? where id =?";
 
             PreparedStatement stmt = con.prepareStatement(sql);
 
@@ -272,7 +272,7 @@ public class ProdutosDAO {
         try {
             int qtd_estoque = 0;
 
-            String sql = "SELECT qtd_estoque from tb_produtos where id =?";
+            String sql = "SELECT qtd_estoque from BDVENDAS.tb_produtos where id =?";
 
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setInt(1, id);
@@ -294,7 +294,7 @@ public class ProdutosDAO {
     //METODO QUE ADICIONA AO ESTOQUE
     public void adicionarEstoque(int id, int qtd_nova) {
         try {
-            String sql = "update tb_produtos set qtd_estoque =? where id =?";
+            String sql = "update BDVENDAS.tb_produtos set qtd_estoque =? where id =?";
 
             PreparedStatement stmt = con.prepareStatement(sql);
 

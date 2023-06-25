@@ -32,7 +32,7 @@ public class FornecedoresDAO {
         try {
 
             //1º PASSO - CRIAR O COMANDO SQL
-            String sql = "insert into tb_fornecedores (nome, cnpj, email, telefone, celular, cep, endereco, numero, complemento, bairro, cidade, estado)"
+            String sql = "insert into BDVENDAS.tb_fornecedores (nome, cnpj, email, telefone, celular, cep, endereco, numero, complemento, bairro, cidade, estado)"
                     + "values (?,?,?,?,?,?,?,?,?,?,?,?)";
 
             //2º PASSO - CONECTAR O BANCO DE DADOS E ORGANIZAR O COMANDO SQL
@@ -69,7 +69,7 @@ public class FornecedoresDAO {
         try {
 
             //1º PASSO - CRIAR O COMANDO SQL
-            String sql = "update tb_fornecedores set nome=?, cnpj=?, email=?, telefone=?, celular=?, cep=?, endereco=?, numero=?, complemento=?, bairro=?,"
+            String sql = "update BDVENDAS.tb_fornecedores set nome=?, cnpj=?, email=?, telefone=?, celular=?, cep=?, endereco=?, numero=?, complemento=?, bairro=?,"
                     + "cidade=?, estado=? where id =?";
 
             //2º PASSO - CONECTAR O BANCO DE DADOS E ORGANIZAR O COMANDO SQL
@@ -107,7 +107,7 @@ public class FornecedoresDAO {
         try {
 
             //1º PASSO - CRIAR O COMANDO SQL
-            String sql = "delete from tb_fornecedores where id = ?";
+            String sql = "delete from BDVENDAS.tb_fornecedores where id = ?";
 
             //2º PASSO - CONECTAR O BANCO DE DADOS E ORGANIZAR O COMANDO SQL
             PreparedStatement stmt = con.prepareStatement(sql);
@@ -132,7 +132,7 @@ public class FornecedoresDAO {
             List<Fornecedores> lista = new ArrayList<>();
 
             //CRIAR O SQL, ORGANIZAR E EXECUTAR
-            String sql = "select * from tb_fornecedores";
+            String sql = "select * from BDVENDAS.tb_fornecedores";
             PreparedStatement stmt = con.prepareStatement(sql);
             ResultSet rs = stmt.executeQuery();
 
@@ -167,7 +167,7 @@ public class FornecedoresDAO {
         //METODO CONSULTACLIENTE POR NOME
     public Fornecedores consultaPorNome(String nome) {
         try {
-            String sql = "select * from tb_fornecedores where nome = ?";
+            String sql = "select * from BDVENDAS.tb_fornecedores where nome = ?";
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setString(1, nome);
 
@@ -207,7 +207,7 @@ public class FornecedoresDAO {
             List<Fornecedores> lista = new ArrayList<>();
 
             //CRIAR O SQL, ORGANIZAR E EXECUTAR
-            String sql = "select * from tb_fornecedores where nome like ?";
+            String sql = "select * from BDVENDAS.tb_fornecedores where nome like ?";
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setString(1, nome);
 

@@ -33,7 +33,7 @@ public class ClientesDAO {
         try {
 
             //1º PASSO - CRIAR O COMANDO SQL
-            String sql = "insert into tb_clientes (nome, rg, cpf, email, telefone, celular, cep, endereco, numero, complemento, bairro, cidade, estado)"
+            String sql = "insert into BDVENDAS.tb_clientes (nome, rg, cpf, email, telefone, celular, cep, endereco, numero, complemento, bairro, cidade, estado)"
                     + "values (?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
             //2º PASSO - CONECTAR O BANCO DE DADOS E ORGANIZAR O COMANDO SQL
@@ -71,7 +71,7 @@ public class ClientesDAO {
         try {
 
             //1º PASSO - CRIAR O COMANDO SQL
-            String sql = "update tb_clientes set nome=?, rg=?, cpf=?, email=?, telefone=?, celular=?, cep=?, endereco=?, numero=?, complemento=?, bairro=?,"
+            String sql = "update BDVENDAS.tb_clientes set nome=?, rg=?, cpf=?, email=?, telefone=?, celular=?, cep=?, endereco=?, numero=?, complemento=?, bairro=?,"
                     + "cidade=?, estado=? where id =?";
 
             //2º PASSO - CONECTAR O BANCO DE DADOS E ORGANIZAR O COMANDO SQL
@@ -110,7 +110,7 @@ public class ClientesDAO {
         try {
 
             //1º PASSO - CRIAR O COMANDO SQL
-            String sql = "delete from tb_clientes where id = ?";
+            String sql = "delete from BDVENDAS.tb_clientes where id = ?";
 
             //2º PASSO - CONECTAR O BANCO DE DADOS E ORGANIZAR O COMANDO SQL
             PreparedStatement stmt = con.prepareStatement(sql);
@@ -135,7 +135,7 @@ public class ClientesDAO {
             List<Clientes> lista = new ArrayList<>();
 
             //CRIAR O SQL, ORGANIZAR E EXECUTAR
-            String sql = "select * from tb_clientes";
+            String sql = "select * from BDVENDAS.tb_clientes";
             PreparedStatement stmt = con.prepareStatement(sql);
             ResultSet rs = stmt.executeQuery();
 
@@ -172,7 +172,7 @@ public class ClientesDAO {
     //METODO CONSULTA CLIENTE POR NOME
     public Clientes consultaPorNome(String nome) {
         try {
-            String sql = "select * from tb_clientes where nome = ?";
+            String sql = "select * from BDVENDAS.tb_clientes where nome = ?";
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setString(1, nome);
 
@@ -213,7 +213,7 @@ public class ClientesDAO {
             List<Clientes> lista = new ArrayList<>();
 
             //CRIAR O SQL, ORGANIZAR E EXECUTAR
-            String sql = "select * from tb_clientes where nome like ?";
+            String sql = "select * from BDVENDAS.tb_clientes where nome like ?";
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setString(1, nome);
 
@@ -272,7 +272,7 @@ public class ClientesDAO {
     //METODO BUSCA CLIENTE POR CPF
     public Clientes buscaPorCpf(String cpf) {
         try {
-            String sql = "select * from tb_clientes where cpf = ?";
+            String sql = "select * from BDVENDAS.tb_clientes where cpf = ?";
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setString(1, cpf);
 

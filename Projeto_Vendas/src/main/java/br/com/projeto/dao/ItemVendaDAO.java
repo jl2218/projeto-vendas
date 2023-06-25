@@ -31,7 +31,7 @@ public class ItemVendaDAO {
     public void cadastraItem(ItemVenda obj) {
         try {
             //1º PASSO - CRIAR O COMANDO SQL
-            String sql = "insert into tb_itensvendas (venda_id, produto_id, qtd, subtotal)"
+            String sql = "insert into BDVENDAS.tb_itensvendas (venda_id, produto_id, qtd, subtotal)"
                     + "values (?,?,?,?)";
 
             //2º PASSO - CONECTAR O BANCO DE DADOS E ORGANIZAR O COMANDO SQL
@@ -46,7 +46,7 @@ public class ItemVendaDAO {
             stmt.close();;
 
         } catch (SQLException erro) {
-            JOptionPane.showMessageDialog(null, "Erro" + erro);
+            JOptionPane.showMessageDialog(null, "Erro nesse metodo" + erro);
 
         }
     }
@@ -58,8 +58,8 @@ public class ItemVendaDAO {
             List<ItemVenda> lista = new ArrayList<>();
 
             //CRIAR O SQL, ORGANIZAR E EXECUTAR
-            String sql = "select p.descricao, i.qtd, p.preco, i.subtotal from tb_itensvendas as i " 
-                    + "inner join tb_produtos as p on(i.produto_id = p.id) where venda_id = ?";
+            String sql = "select p.descricao, i.qtd, p.preco, i.subtotal from BDVENDAS.tb_itensvendas as i " 
+                    + "inner join BDVENDAS.tb_produtos as p on(i.produto_id = p.id) where venda_id = ?";
 
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setInt(1, venda_id);
@@ -83,7 +83,7 @@ public class ItemVendaDAO {
             return lista;
 
         } catch (SQLException erro) {
-            JOptionPane.showMessageDialog(null, "Erro" + erro);
+            JOptionPane.showMessageDialog(null, "Erro " + erro);
             return null;
         }
         

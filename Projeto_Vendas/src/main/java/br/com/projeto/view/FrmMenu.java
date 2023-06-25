@@ -32,6 +32,7 @@ public class FrmMenu extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         lblUsuario = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -76,19 +77,32 @@ public class FrmMenu extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblUsuario)
-                .addContainerGap(1003, Short.MAX_VALUE))
+                .addContainerGap(1011, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(14, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(lblUsuario))
                 .addContainerGap())
         );
 
-        jMenu1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lara\\Dropbox\\My PC (LAPTOP-51K6VIU3)\\Documents\\NetBeansProjects\\Projeto_Vendas\\Projeto_Vendas\\src\\main\\java\\imagem\\clientes.png")); // NOI18N
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 903, Short.MAX_VALUE)
+        );
+
+        jMenu1.setIcon(new javax.swing.ImageIcon("D:\\ProjetosJava\\Projeto_Vendas1\\Projeto_Vendas\\src\\main\\java\\imagem\\clientes.png")); // NOI18N
         jMenu1.setText("Clientes");
         jMenu1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
@@ -102,7 +116,7 @@ public class FrmMenu extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lara\\Dropbox\\My PC (LAPTOP-51K6VIU3)\\Documents\\NetBeansProjects\\Projeto_Vendas\\Projeto_Vendas\\src\\main\\java\\imagem\\funcionarios.png")); // NOI18N
+        jMenu2.setIcon(new javax.swing.ImageIcon("D:\\ProjetosJava\\Projeto_Vendas1\\Projeto_Vendas\\src\\main\\java\\imagem\\funcionarios.png")); // NOI18N
         jMenu2.setText("Funcionários");
         jMenu2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
@@ -116,7 +130,7 @@ public class FrmMenu extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu2);
 
-        jMenu3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lara\\Dropbox\\My PC (LAPTOP-51K6VIU3)\\Documents\\NetBeansProjects\\Projeto_Vendas\\Projeto_Vendas\\src\\main\\java\\imagem\\fornecedores.png")); // NOI18N
+        jMenu3.setIcon(new javax.swing.ImageIcon("D:\\ProjetosJava\\Projeto_Vendas1\\Projeto_Vendas\\src\\main\\java\\imagem\\fornecedores.png")); // NOI18N
         jMenu3.setText("Fornecedores");
         jMenu3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
@@ -130,7 +144,7 @@ public class FrmMenu extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu3);
 
-        jMenu6.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lara\\Dropbox\\My PC (LAPTOP-51K6VIU3)\\Documents\\NetBeansProjects\\Projeto_Vendas\\Projeto_Vendas\\src\\main\\java\\imagem\\produtos.png")); // NOI18N
+        jMenu6.setIcon(new javax.swing.ImageIcon("D:\\ProjetosJava\\Projeto_Vendas1\\Projeto_Vendas\\src\\main\\java\\imagem\\produtos.png")); // NOI18N
         jMenu6.setText("Produtos");
         jMenu6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
@@ -152,7 +166,7 @@ public class FrmMenu extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu6);
 
-        jMenu4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lara\\Dropbox\\My PC (LAPTOP-51K6VIU3)\\Documents\\NetBeansProjects\\Projeto_Vendas\\Projeto_Vendas\\src\\main\\java\\imagem\\vendas.png")); // NOI18N
+        jMenu4.setIcon(new javax.swing.ImageIcon("D:\\ProjetosJava\\Projeto_Vendas1\\Projeto_Vendas\\src\\main\\java\\imagem\\vendas.png")); // NOI18N
         jMenu4.setText("Vendas");
         jMenu4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
@@ -182,7 +196,7 @@ public class FrmMenu extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu4);
 
-        jMenu5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lara\\Dropbox\\My PC (LAPTOP-51K6VIU3)\\Documents\\NetBeansProjects\\Projeto_Vendas\\Projeto_Vendas\\src\\main\\java\\imagem\\configuracoes.png")); // NOI18N
+        jMenu5.setIcon(new javax.swing.ImageIcon("D:\\ProjetosJava\\Projeto_Vendas1\\Projeto_Vendas\\src\\main\\java\\imagem\\configuracoes.png")); // NOI18N
         jMenu5.setText("Configurações");
         jMenu5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
@@ -196,7 +210,7 @@ public class FrmMenu extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu5);
 
-        jMenu7.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lara\\Dropbox\\My PC (LAPTOP-51K6VIU3)\\Documents\\NetBeansProjects\\Projeto_Vendas\\Projeto_Vendas\\src\\main\\java\\imagem\\sair.png")); // NOI18N
+        jMenu7.setIcon(new javax.swing.ImageIcon("D:\\ProjetosJava\\Projeto_Vendas1\\Projeto_Vendas\\src\\main\\java\\imagem\\sair.png")); // NOI18N
         jMenu7.setText("Sair");
         jMenu7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jMenu7.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -213,11 +227,13 @@ public class FrmMenu extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 969, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -357,6 +373,7 @@ public class FrmMenu extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel lblUsuario;
     public javax.swing.JMenuItem menu_controle;
     public javax.swing.JMenuItem menu_posicao;

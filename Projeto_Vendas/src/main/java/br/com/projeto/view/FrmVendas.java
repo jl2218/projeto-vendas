@@ -511,14 +511,12 @@ public class FrmVendas extends javax.swing.JFrame {
     }//GEN-LAST:event_txtQtdActionPerformed
 
     private void btnBuscaClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscaClienteActionPerformed
-        // BOTAO PESQUISA POR CPF
-        Clientes obj = new Clientes();
+        // BOTAO PESQUISA POR CPF       
         ClientesDAO dao = new ClientesDAO();
 
         obj = dao.buscaPorCpf(txtCpf.getText());
 
         txtNome.setText(obj.getNome());
-
     }//GEN-LAST:event_btnBuscaClienteActionPerformed
 
     private void txtTotalVendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTotalVendaActionPerformed

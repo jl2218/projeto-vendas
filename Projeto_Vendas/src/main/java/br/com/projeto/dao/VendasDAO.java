@@ -32,7 +32,7 @@ public class VendasDAO {
     public void cadastrarVenda(Vendas obj) {
         try {
             //1º PASSO - CRIAR O COMANDO SQL
-            String sql = "insert into tb_vendas (cliente_id, data_venda, total_venda, observacoes)"
+            String sql = "insert into BDVENDAS.tb_vendas (cliente_id, data_venda, total_venda, observacoes)"
                     + "values (?,?,?,?)";
 
             //2º PASSO - CONECTAR O BANCO DE DADOS E ORGANIZAR O COMANDO SQL
@@ -58,7 +58,7 @@ public class VendasDAO {
 
         try {
             int idvenda = 0;
-            String sql = "select max(id) id from tb_vendas";
+            String sql = "select max(id) id from BDVENDAS.tb_vendas";
             PreparedStatement ps = con.prepareStatement(sql);
 
             ResultSet rs = ps.executeQuery();
@@ -87,8 +87,8 @@ public class VendasDAO {
             List<Vendas> lista = new ArrayList<>();
 
             //CRIAR O SQL, ORGANIZAR E EXECUTAR
-            String sql = "select v.id, date_format(v.data_venda, '%d/%m/%y') as data_formatada, c.nome, v.total_venda, v.observacoes from tb_vendas as v "
-                    + "inner join tb_clientes as c on (v.cliente_id = c.id) where v.data_venda BETWEEN ? AND ?";
+            String sql = "select v.id, date_format(v.data_venda, '%d/%m/%y') as data_formatada, c.nome, v.total_venda, v.observacoes from BDVENDAS.tb_vendas as v "
+                    + "inner join BDVENDAS.tb_clientes as c on (v.cliente_id = c.id) where v.data_venda BETWEEN ? AND ?";
 
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setString(1, data_inicio.toString());
@@ -125,7 +125,7 @@ public class VendasDAO {
         try {
             double totalVenda = 0;
             
-            String sql = "select sum(total_venda) as total from tb_vendas where data_venda = ?";
+            String sql = "select sum(total_venda) as total from BDVENDAS.tb_vendas where data_venda = ?";
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, data_venda.toString());
             

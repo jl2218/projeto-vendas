@@ -35,7 +35,7 @@ public class FuncionariosDAO {
         try {
 
             //1º PASSO - CRIAR O COMANDO SQL
-            String sql = "insert into tb_funcionarios (nome, rg, cpf, email, senha, cargo, nivel_acesso, telefone, celular, cep, endereco, numero, complemento, bairro, cidade, estado)"
+            String sql = "insert into BDVENDAS.tb_funcionarios (nome, rg, cpf, email, senha, cargo, nivel_acesso, telefone, celular, cep, endereco, numero, complemento, bairro, cidade, estado)"
                     + "values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
             //2º PASSO - CONECTAR O BANCO DE DADOS E ORGANIZAR O COMANDO SQL
@@ -75,7 +75,7 @@ public class FuncionariosDAO {
         try {
 
             //1º PASSO - CRIAR O COMANDO SQL
-            String sql = "update tb_funcionarios set nome=?, rg=?, cpf=?, email=?, senha=?, cargo=?, nivel_acesso=?, telefone=?, celular=?, cep=?, endereco=?, numero=?, complemento=?, bairro=?,"
+            String sql = "update BDVENDAS.tb_funcionarios set nome=?, rg=?, cpf=?, email=?, senha=?, cargo=?, nivel_acesso=?, telefone=?, celular=?, cep=?, endereco=?, numero=?, complemento=?, bairro=?,"
                     + "cidade=?, estado=? where id =?";
 
             //2º PASSO - CONECTAR O BANCO DE DADOS E ORGANIZAR O COMANDO SQL
@@ -117,7 +117,7 @@ public class FuncionariosDAO {
         try {
 
             //1º PASSO - CRIAR O COMANDO SQL
-            String sql = "delete from tb_funcionarios where id = ?";
+            String sql = "delete from BDVENDAS.tb_funcionarios where id = ?";
 
             //2º PASSO - CONECTAR O BANCO DE DADOS E ORGANIZAR O COMANDO SQL
             PreparedStatement stmt = con.prepareStatement(sql);
@@ -142,7 +142,7 @@ public class FuncionariosDAO {
             List<Funcionarios> lista = new ArrayList<>();
 
             //CRIAR O SQL, ORGANIZAR E EXECUTAR
-            String sql = "select * from tb_funcionarios";
+            String sql = "select * from BDVENDAS.tb_funcionarios";
             PreparedStatement stmt = con.prepareStatement(sql);
             ResultSet rs = stmt.executeQuery();
 
@@ -182,7 +182,7 @@ public class FuncionariosDAO {
     //METODO CONSULTA FUNCIONARIO POR NOME 
     public Funcionarios consultaPorNome(String nome) {
         try {
-            String sql = "select * from tb_funcionarios where nome = ?";
+            String sql = "select * from BDVENDAS.tb_funcionarios where nome = ?";
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setString(1, nome);
 
@@ -226,7 +226,7 @@ public class FuncionariosDAO {
             List<Funcionarios> lista = new ArrayList<>();
 
             //CRIAR O SQL, ORGANIZAR E EXECUTAR
-            String sql = "select * from tb_funcionarios where nome like ?";
+            String sql = "select * from BDVENDAS.tb_funcionarios where nome like ?";
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setString(1, nome);
 
@@ -290,7 +290,7 @@ public class FuncionariosDAO {
         try {
 
             // 1º PASSO - SQL
-            String sql = "select* from tb_funcionarios where email = ? and senha = ?";
+            String sql = "select* from BDVENDAS.tb_funcionarios where email = ? and senha = ?";
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setString(1, email);
             stmt.setString(2, senha);
